@@ -73,6 +73,6 @@ function mostrarCarrito(){
         prodPedido += `\n - ${item.nombre}`
         precioPedido += item.precio
     }
-    alert(`Final Pedido: \n ${prodPedido} \n Precio final: ${precioPedido}`)
+    alert(`Final Pedido: \n ${prodPedido} \n Precio final: $${precioPedido}`)
 }
 
