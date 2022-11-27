@@ -36,28 +36,10 @@ function agregaCarrito(){
     let respuestaValida = validarPedido(respuesta)
 
     while(respuestaValida != 0){
-
-        switch(respuestaValida){
-            case 1: 
-                pedido.push(platos[0])
-                alert(`${platos[0].nombre} agregado al pedido!`)
-                break;
-            case 2:
-                pedido.push(platos[1])
-                alert(`${platos[1].nombre} agregado al pedido!`)
-                break;
-            case 3:
-                pedido.push(platos[2])
-                alert(`${platos[2].nombre} agregado al pedido!`)
-                break;
-            case 4:
-                pedido.push(platos[3])
-                alert(`${platos[3].nombre} agregado al pedido!`)
-                break;
-            default:
-                alert('No tenemos el plato que selecionaste')
-                break;
-        }
+        let i = 0
+        pedido.push(platos[respuestaValida-1]) === platos.find(plato =>plato.id === respuestaValida)
+        alert(`${platos[respuestaValida-1].nombre} agregado al pedido!`)
+        i++
         respuesta = parseInt(prompt(menu))
         respuestaValida = validarPedido(respuesta)
     }
