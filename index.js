@@ -1,5 +1,3 @@
-alert("Bienvenido a BurgerLandia")
-
 class Plato {
     constructor(id, nombre, precio) {
         this.id = id
@@ -15,46 +13,43 @@ const Plato4 = new Plato(4,'Ensalada',750)
 const platos = [Plato1,Plato2,Plato3,Plato4]
 const pedido = []
 
-let menu = "Menu:"
+const platosDiv = document.querySelector("#platosDiv")
 
-function validarPedido(resp){
-    while(isNaN(resp) || resp>4){
-        alert("Ingrese una opcion correcta!")
-        resp = parseInt(prompt(menu))
+platos.forEach(plato => {
+    platosDiv.innerHTML +=`
+    <div id="plato${plato.id}" class="card prodCard">
+        <div class="card-body">
+          <h5 class="card-title">${plato.nombre}</h5>
+          <p class="card-text">$${plato.precio}</p>
+          <button id=${plato.id} class="btn btn-dark">Agregar</button>
+        </div>
+    </div>
+    `
+})
+
+const btnAgregar = document.querySelectorAll(".btn-dark")
+
+btnAgregar.forEach(boton => {
+    boton.onclick = () =>{
+        const platoSelect = platos.find(plato =>plato.id === parseInt(boton.id))
+        
+        const platoCarrito = {...platoSelect,cantidad:1}
+
+        const indexCarrito = pedido.findIndex(plato => plato.id === platoCarrito.id)
+        if(indexCarrito === -1){
+            pedido.push(platoCarrito)
+        }else{
+            pedido[indexCarrito].cantidad += 1
+        }
     }
-    return resp
+});
+
+const finalizarPedido = document.querySelector("#finalizar")
+finalizarPedido.onclick = () =>{
+    const pedidoTotal = pedido.map(plato => plato.precio * plato.cantidad)
+    let precioTotal = 0
+    pedidoTotal.forEach(precio => {
+        precioTotal += precio
+    });
+    console.log(precioTotal)
 }
-
-function agregaCarrito(){
-    for (item of platos){
-        menu +=`\n ${item.id} - ${item.nombre} ---- $${item.precio}`
-    }
-    menu += "\n Ingrese el numero de producto que desea agregar a su pedido: "
-    menu += "\n Eliga 0 para finalizar."
-    let respuesta = parseInt(prompt(menu))
-    
-    let respuestaValida = validarPedido(respuesta)
-
-    while(respuestaValida != 0){
-        let i = 0
-        pedido.push(platos[respuestaValida-1]) === platos.find(plato =>plato.id === respuestaValida)
-        alert(`${platos[respuestaValida-1].nombre} agregado al pedido!`)
-        i++
-        respuesta = parseInt(prompt(menu))
-        respuestaValida = validarPedido(respuesta)
-    }
-    alert("Pedido cerrado")
-    mostrarCarrito()
-}
-let prodPedido = 'Tu pedido: '
-let precioPedido = 0 
-agregaCarrito()
-
-function mostrarCarrito(){
-    for(item of pedido){
-        prodPedido += `\n - ${item.nombre}`
-        precioPedido += item.precio
-    }
-    alert(`Final Pedido: \n ${prodPedido} \n Precio final: $${precioPedido}`)
-}
-
