@@ -11,7 +11,7 @@ const Plato3 = new Plato(3,'Hambugesa completa',1200)
 const Plato4 = new Plato(4,'Ensalada',750)
 
 const platos = [Plato1,Plato2,Plato3,Plato4]
-const pedido = []
+const pedido = JSON.parse(localStorage.getItem("pedido")) || []
 
 const platosDiv = document.querySelector("#platosDiv")
 
@@ -41,6 +41,7 @@ btnAgregar.forEach(boton => {
         }else{
             pedido[indexCarrito].cantidad += 1
         }
+        localStorage.setItem("pedido",JSON.stringify(pedido))
     }
 });
 
@@ -51,5 +52,6 @@ finalizarPedido.onclick = () =>{
     pedidoTotal.forEach(precio => {
         precioTotal += precio
     });
+    console.log(pedido)
     console.log(precioTotal)
 }
