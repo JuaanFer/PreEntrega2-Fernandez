@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .prodCard{
     width: 20rem;
     margin: 4px;
