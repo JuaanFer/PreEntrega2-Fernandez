@@ -11,9 +11,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar bg-light">
+        <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="./index.html">
                 <img src="./imagenes/favicon_io/favicon-32x32.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Burgería
               </a>
@@ -21,7 +21,18 @@
             </div>
           </nav>
     </header>
-    <div id="platosDiv" class="row"></div>
+
+    <div class="bienvenidos">
+      <h1>Bienvenidos a Buegería.</h1>
+    </div>
+
+    <div class="container">
+        <div class="row text-center baner_title">
+            <h2>MENU</h2>
+        </div>
+    </div>
+
+    <div id="platosDiv"></div>
 
     <div>
         <button id="finalizar">Finalizar Pedido</button>
@@ -43,6 +54,20 @@
           </div>
         </div>
       </div>
+
+      <footer id="pie">
+        <div class="logos_footer">
+            <a href="./index.html"><img src="" alt=""></a>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/" target="_blank"><img src="./imagenes/logo_instagram.png" alt="logo instagram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="./imagenes/logo_twitter.png" alt="logo twitter"></a>
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="./imagenes/logo_facebook.png" alt="logo facebook"></a>
+        </div>
+        <div class="legal">
+            <p>© Copyright 2022 - <span>Burgeria</span> | Todos los derechos reservados | 721 Adams Ave, Pensilvania, EE.UU.</p>
+        </div>
+    </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

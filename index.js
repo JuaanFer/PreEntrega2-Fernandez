@@ -82,7 +82,7 @@ function mostrarPedido(){
         `
     })
     if(pedido.length===0){
-        pedidoDiv.innerHTML = `<h5>Aun no tienes ningun plato seleccionado</h5>`
+        pedidoDiv.innerHTML = `<p>Aun no has agregado nada...</p>`
     }
 }
 

@@ -7,3 +7,56 @@
     margin: 4px;
     background-color: tomato;
 }
+
+.bienvenidos {
+    background-image: url("../imagenes/narek-petrosyan-yQzAULCVK2I-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: bold;
+    padding: 300px 0 300px 0;
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+    text-shadow: 8px 8px 7px black;
+    font-size: 320%;
+}
+
+footer {
+    background-color: #2E2836;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #F8F4F9;
+  }
+  footer .legal {
+    padding-top: 25px;
+    text-align: center;
+  }
+
+  .logos_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logos_footer a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .redes {
+    display: flex;
+    justify-content: center;
+  }
+  .redes a {
+    margin: 15px;
+    transition: all 0.5s;
+  }
+  .redes a:hover {
+    transform: scale(1.25);
+  }
+  
