@@ -2,10 +2,20 @@
     margin: 0;
     padding: 0;
 }
+body{
+  overflow-x: hidden;
+}
+.btnNav{
+  background-color: #eed218;
+  border-color: #eed218;
+}
+.btnNav:hover{
+  background-color: #2E2836;
+}
 .prodCard{
     width: 20rem;
     margin: 4px;
-    background-color: tomato;
+    border-radius: 25px;
 }
 
 .bienvenidos {
@@ -24,6 +34,42 @@ h1 {
     text-align: center;
     text-shadow: 8px 8px 7px black;
     font-size: 320%;
+}
+.content{
+  background-color: #eed218;
+}
+h2{
+  padding-top: 20px;
+  text-shadow: 8px 8px 7px black;
+}
+.menu{
+  padding: 20px;
+}
+
+.imgCard{
+  width: 262px;
+  height: 262px;
+}
+.btn-agregar:hover{
+  background-color: #eed218;
+}
+
+h5{
+  padding: 16px;
+}
+
+.modal-contenedor{
+  display: flex;
+  align-items: center;
+}
+
+.btnVaciar{
+  color: red;
+}
+
+.img-carrito{
+  width: 200px;
+  padding: 20px;
 }
 
 footer {

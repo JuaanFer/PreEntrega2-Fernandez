@@ -1,0 +1,44 @@
+[
+{
+    "id": 1,
+    "nombre": "Hambugesa simple",
+    "precio": 800,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFMxYwZ2y1umes0CPDj7adLxZ7Puah3smfQ&usqp=CAU"
+},
+{
+    "id": 2,
+    "nombre": "Hambugesa con queso",
+    "precio": 1000,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwowx19GutwgVwPnIbND0SS8BOhu0vyCxuaw&usqp=CAU"
+},
+{
+    "id": 3,
+    "nombre": "Hambugesa completa",
+    "precio": 1200,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN0ImJB1JBxk0MtZqniJjJbHBgeP3_nalOTQ&usqp=CAU"
+},
+{
+    "id": 4,
+    "nombre": "Ensalada",
+    "precio": 750,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwC9T0wgEqqcpO7WSFPn7sfMZSCd-QJGMJmQ&usqp=CAU"
+},
+{
+    "id": 5,
+    "nombre": "Hambugesa de pollo",
+    "precio": 800,
+    "img": "https://okdiario.com/img/2016/01/19/hamburguesa-de-pollo-crujiente-con-salsa-ligera-de-ajo.jpg"
+},
+{
+    "id": 6,
+    "nombre": "Hambugesa de pollo con queso",
+    "precio": 900,
+    "img": "https://www.comedera.com/wp-content/uploads/2020/04/sandwich-434658_1280.jpg"
+},
+{
+    "id": 7,
+    "nombre": "Hambugesa de pollo completa",
+    "precio": 1100,
+    "img": "https://assets.unileversolutions.com/recipes-v2/231513.jpg"
+}
+]
